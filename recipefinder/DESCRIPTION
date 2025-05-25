@@ -6,3 +6,10 @@ Author: Anastasiia Galiagina
 Description: An R package that suggests recipes based on ingredients you already have at home.
 Encoding: UTF-8
 LazyData: true
+Imports:
+    stringr
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 7.3.2

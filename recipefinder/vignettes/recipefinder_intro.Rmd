@@ -1,0 +1,50 @@
+---
+title: "Using recipefinder"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using recipefinder}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(recipefinder)
+```
+
+
+## What is "recipefinder"?
+
+"recipefinder" helps you find recipes based on ingredients you already have at home. It uses a recipe database ("Recipes.csv") included in the package and returns meal suggestions based on what you input.
+
+It is made to:
+
+- Reduce food waste  
+- Inspire you with what is already in your fridge  
+- Quick meal ideas with limited number of ingredients
+
+## Basic usage 
+
+To show all available recipes from the dataset: 
+```{r}
+head(recipes_list(), 3)
+```
+
+To find recipes based on the ingredients you have:
+```{r}
+head(find_recipes(
+  ingredients = c("chicken", "flour", "pepper"),
+  file = system.file("extdata", "Recipes.csv", package = "recipefinder")
+), 3)
+```
+
+## How it works
+
+- The Recipes.csv file contains the titles of the recipes and full ingredient lists.
+- The find_recipes() function matches the input ingredients with the recipes from Recipes.csv file, and outputs the matched titles of the recipes and their full ingredient lists. 
