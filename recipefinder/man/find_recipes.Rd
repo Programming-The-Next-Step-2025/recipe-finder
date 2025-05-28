@@ -4,12 +4,14 @@
 \alias{find_recipes}
 \title{Get Recipes Based on Ingredients That You Have at Home}
 \usage{
-find_recipes(ingredients, file)
+find_recipes(ingredients, file, max_minutes = Inf)
 }
 \arguments{
 \item{ingredients}{A character vector of ingredients you have or want to use.}
 
 \item{file}{Path to the Recipes.csv file.}
+
+\item{max_minutes}{Maximum time (in minutes) to filter recipes. Default is Inf (no filter).}
 }
 \value{
 A character vector of recipe names and all of the relevant ingredients
@@ -23,6 +25,6 @@ or simply ingredients that you want to use.
 The recipes are based on the Recipes.csv file.
 }
 \examples{
-get_recipes(c("chicken", "pepper", "flour"),
-                     system.file("extdata", "Recipes.csv", package = "recipefinder"))
+find_recipes(c("chicken", "pepper", "flour"),
+                     system.file("extdata", "Recipes.csv", package = "recipefinder"), 30)
 }
