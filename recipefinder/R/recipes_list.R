@@ -9,7 +9,11 @@
 #' recipes_list()
 #' @export
 recipes_list <- function(
+<<<<<<< HEAD
     file = system.file("extdata", "Recipes.csv", package = "recipefinder")
+=======
+    file# = system.file("extdata", "Recipes.csv", package = "recipefinder")
+>>>>>>> week-3
 ) {
   df <- read.csv(file, stringsAsFactors = FALSE)
   return(df$Title)
