@@ -4,13 +4,7 @@
 \alias{recipes_list}
 \title{List All Recipes}
 \usage{
-<<<<<<< HEAD
-recipes_list(
-  file = system.file("extdata", "Recipes.csv", package = "recipefinder")
-)
-=======
 recipes_list(file)
->>>>>>> week-3
 }
 \arguments{
 \item{file}{Path to the Recipes.csv file. Default is the internal copy in extdata.}
