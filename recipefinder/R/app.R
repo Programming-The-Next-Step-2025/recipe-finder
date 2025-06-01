@@ -109,7 +109,6 @@ server <- function(input, output, session) {
 
     HTML(paste0(
       "<h4>🍽️ ", title, "</h4>",
-      "<p><strong>⏱️ Total time:</strong> ", total_time, "</p>",
       "<p><strong>🧂 Ingredients:</strong> ", paste(ingredients, collapse = ", "), "</p>",
       "<p><strong>📖 Directions:</strong><br>", directions, "</p>"
     ))

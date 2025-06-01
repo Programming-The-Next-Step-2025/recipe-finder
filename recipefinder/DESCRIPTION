@@ -7,7 +7,8 @@ Description: An R package that suggests recipes based on ingredients you already
 Encoding: UTF-8
 LazyData: true
 Imports:
-    stringr
+    stringr,
+    utils
 Suggests: 
     knitr,
     rmarkdown

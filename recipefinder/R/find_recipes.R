@@ -9,7 +9,7 @@
 #' @param ingredients A character vector of ingredients you have or want to use.
 #' @param file Path to the Recipes.csv file.
 #' @param max_minutes Maximum time (in minutes) to filter recipes. Default is Inf (no filter).
-#' @return A character vector of recipe names and all of the relevant ingredients
+#' @return A character vector of recipe names, all of the relevant ingredients and directions.
 #' @examples
 #' find_recipes(c("chicken", "pepper", "flour"),
 #'                      system.file("extdata", "Recipes.csv", package = "recipefinder"), 30)
@@ -23,9 +23,6 @@ find_recipes <- function(ingredients, file, max_minutes = Inf) {
   df <- df[!duplicated(df$recipe_name), ]
 
   user_ingredients <- tolower(trimws(ingredients))
-
-  # Function to split and clean each row's ingredients
-  df <- df[!duplicated(df$recipe_name), ]
 
   # Parse total_time into numeric minutes
   parse_total_time <- function(time_str) {
